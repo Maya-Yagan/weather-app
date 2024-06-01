@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">WeatherApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_error">Network error</string>
+    <string name="temperature">NaN°C</string>
+    <string name="weather_condition">Sunny</string>
+    <string name="min_temperature">Min temperature:</string>
+    <string name="max_temperature">Max temperature:</string>
+    <string name="time_zone">time zone</string>
+    <string name="max">Max:</string>
+    <string name="min">Min:</string>
+    <string name="temperature_text">Temperature:</string>
+    <string name="apparent_temperature">Apparent Temperature:</string>
+    <string name="rain_value">NaNmm</string>
+    <string name="rain_sum">Rain sum:</string>
+    <string name="wind_speed">NaNkm/h</string>
+    <string name="uv_index">NaN</string>
+    <string name="max_precipitation_probability">Max Precipitation Probability:</string>
+    <string name="max_uv_index_clear_sky">Max UV index clear sky:</string>
+    <string name="precipitation_value">NaN%</string>
+    <string name="max_wind_speed">Max Wind Speed:</string>
+    <string name="weatherimage">weatherImage</string>
+    <string name="wind_speed_home">Wind Speed:</string>
 </resources>

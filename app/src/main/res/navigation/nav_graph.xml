@@ -20,7 +20,10 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <argument
-            android:name="WeatherDetails"
+            android:name="selectedDayIndex"
             app:argType="integer" />
+        <argument
+            android:name="dailyWeather"
+            app:argType="com.maya2002yagan.weatherapp.model.DailyWeather" />
     </fragment>
 </navigation>

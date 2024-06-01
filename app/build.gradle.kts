@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kapt)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.androidx.navigation.safeargs.kotlin)
+    id(libs.plugins.agconnect.get().pluginId)
 }
 
 android {
@@ -20,13 +21,26 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("config") {
+            keyAlias = "mykey"
+            keyPassword = "sad0potato"
+            storeFile = file("key.jks")
+            storePassword = "sad0potato"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("config")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            signingConfig = signingConfigs.getByName("config")
         }
     }
     compileOptions {
@@ -37,7 +51,7 @@ android {
         jvmTarget = "1.8"
     }
 
-    dataBinding{
+    dataBinding {
         enable = true
     }
 }
@@ -61,4 +75,8 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
+    implementation(libs.agconnect.core)
+    implementation(libs.hms.location.kit)
+    implementation(libs.huawei.ads.prime)
+    implementation(libs.huawei.push)
 }
